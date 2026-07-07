@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مركز شيخان وشريفة الفارسي — روابطنا</title>
+  <meta property="og:title" content="مركز شيخان وشريفة الفارسي"/>
+  <meta property="og:description" content="روابط تطبيقات مركز تحفيظ القرآن الكريم"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Cairo',sans-serif;
+      min-height:100vh;
+      background:linear-gradient(160deg,#F0F7F0 0%,#E8F4E8 50%,#F5FAF5 100%);
+      display:flex;flex-direction:column;align-items:center;
+      padding:40px 20px 60px;
+      position:relative;overflow:hidden;
+    }
+
+    /* نجوم خلفية */
+    .stars-bg{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+
+    @keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.85;transform:scale(1.5)}}
+    @keyframes twS{0%,100%{opacity:.1;transform:scale(.6) rotate(0deg)}50%{opacity:.75;transform:scale(1.4) rotate(18deg)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes cardIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+    .t1{animation:tw 1.8s ease-in-out infinite}
+    .t2{animation:tw 2.4s ease-in-out infinite .6s}
+    .t3{animation:twS 2.9s ease-in-out infinite 1s}
+    .t4{animation:tw 1.5s ease-in-out infinite .3s}
+    .t5{animation:twS 3.2s ease-in-out infinite .8s}
+    .t6{animation:tw 2.7s ease-in-out infinite 1.4s}
+
+    .header{position:relative;z-index:1;text-align:center;margin-bottom:36px;animation:cardIn .6s ease both}
+    .logo{
+      width:84px;height:84px;border-radius:22px;
+      background:linear-gradient(135deg,#4A7A4A,#5A8A5A);
+      display:flex;align-items:center;justify-content:center;
+      font-size:38px;margin:0 auto 18px;
+      box-shadow:0 8px 28px rgba(74,122,74,0.25);
+      animation:float 4s ease-in-out infinite;
+    }
+    .center-name{font-family:'Amiri',serif;font-size:24px;font-weight:700;color:#1A2E1A;margin-bottom:6px}
+    .center-sub{font-size:13px;color:#8AAA8A;letter-spacing:1px}
+
+    .divider{display:flex;align-items:center;gap:10px;margin:0 auto 32px;width:100%;max-width:420px;position:relative;z-index:1}
+    .divider-line{flex:1;height:0.5px;background:rgba(74,122,74,0.2)}
+    .divider-star{font-size:13px;color:rgba(201,168,76,0.6)}
+
+    .links-container{width:100%;max-width:420px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+
+    .link-card{
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(8px);
+      border-radius:18px;
+      border:1.5px solid #D4E8D4;
+      padding:16px 20px;
+      display:flex;align-items:center;gap:14px;
+      text-decoration:none;
+      box-shadow:0 2px 12px rgba(74,122,74,0.07);
+      transition:all 0.22s ease;
+      animation:cardIn .6s ease both;
+    }
+    .link-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 30px rgba(74,122,74,0.16);
+      border-color:#B8D5B8;
+    }
+    .link-card:active{transform:translateY(-1px)}
+
+    .card-icon{
+      width:52px;height:52px;border-radius:14px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:24px;flex-shrink:0;
+    }
+    .card-body{flex:1;min-width:0}
+    .card-title{font-weight:800;font-size:15px;color:#1A2E1A;margin-bottom:3px}
+    .card-desc{font-size:11px;color:#8AAA8A;line-height:1.5}
+    .card-arrow{font-size:18px;color:#B8D5B8;flex-shrink:0;transition:all .2s}
+    .link-card:hover .card-arrow{color:#4A7A4A;transform:translateX(-3px)}
+
+    .footer{margin-top:44px;font-size:11px;color:#B8D5B8;text-align:center;position:relative;z-index:1}
+
+    /* ألوان أيقونات مختلفة لكل رابط */
+    .icon-green{background:linear-gradient(135deg,#4A7A4A,#5A8A5A);box-shadow:0 4px 14px rgba(74,122,74,0.3)}
+    .icon-gold{background:linear-gradient(135deg,#C9A84C,#A07830);box-shadow:0 4px 14px rgba(201,168,76,0.3)}
+    .icon-blue{background:linear-gradient(135deg,#4A7ABF,#3A5FA0);box-shadow:0 4px 14px rgba(74,122,191,0.3)}
+    .icon-teal{background:linear-gradient(135deg,#4A8A7A,#3A6B5A);box-shadow:0 4px 14px rgba(74,138,122,0.3)}
+  </style>
+</head>
+<body>
+
+<!-- نجوم الخلفية -->
+<svg class="stars-bg" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+  <g class="t1" fill="#C9A84C"><path d="M22,50 L24,43 L26,50 L33,52 L26,54 L24,61 L22,54 L15,52Z"/></g>
+  <g class="t2" fill="#C9A84C"><path d="M370,70 L372,64 L374,70 L380,72 L374,74 L372,80 L370,74 L364,72Z"/></g>
+  <g class="t3" fill="#4A7A4A"><path d="M15,220 L17,214 L19,220 L25,222 L19,224 L17,230 L15,224 L9,222Z"/></g>
+  <g class="t4" fill="#C9A84C"><path d="M382,240 L384,234 L386,240 L392,242 L386,244 L384,250 L382,244 L376,242Z"/></g>
+  <g class="t5" fill="#4A7A4A"><path d="M18,430 L20,424 L22,430 L28,432 L22,434 L20,440 L18,434 L12,432Z"/></g>
+  <g class="t6" fill="#C9A84C"><path d="M378,450 L380,444 L382,450 L388,452 L382,454 L380,460 L378,454 L372,452Z"/></g>
+  <g class="t1" fill="#E8C85A"><path d="M65,30 L66,27 L67,30 L70,31 L67,32 L66,35 L65,32 L62,31Z"/></g>
+  <g class="t3" fill="#C9A84C"><path d="M330,25 L331,22 L332,25 L335,26 L332,27 L331,30 L330,27 L327,26Z"/></g>
+  <g class="t2" fill="#4A7A4A"><path d="M50,150 L51,147 L52,150 L55,151 L52,152 L51,155 L50,152 L47,151Z"/></g>
+  <g class="t5" fill="#E8C85A"><path d="M348,145 L349,142 L350,145 L353,146 L350,147 L349,150 L348,147 L345,146Z"/></g>
+  <g class="t4" fill="#C9A84C"><path d="M75,350 L76,347 L77,350 L80,351 L77,352 L76,355 L75,352 L72,351Z"/></g>
+  <g class="t6" fill="#4A7A4A"><path d="M325,345 L326,342 L327,345 L330,346 L327,347 L326,350 L325,347 L322,346Z"/></g>
+  <g class="t1" fill="#E8C85A"><path d="M180,10 L181,8 L182,10 L184,11 L182,12 L181,14 L180,12 L178,11Z"/></g>
+  <g class="t2" fill="#C9A84C"><path d="M220,18 L221,16 L222,18 L224,19 L222,20 L221,22 L220,20 L218,19Z"/></g>
+  <circle cx="195" cy="6" r="2.5" fill="#C9A84C" class="t3"/>
+  <circle cx="8" cy="110" r="2" fill="#E8C85A" class="t5"/>
+  <circle cx="392" cy="115" r="2" fill="#C9A84C" class="t2"/>
+  <circle cx="8" cy="530" r="2.5" fill="#4A7A4A" class="t4"/>
+  <circle cx="392" cy="535" r="2" fill="#E8C85A" class="t1"/>
+  <circle cx="195" cy="760" r="2" fill="#C9A84C" class="t6"/>
+</svg>
+
+<!-- الهيدر -->
+<div class="header">
+  <div class="logo">🕌</div>
+  <div class="center-name">مركز شيخان وشريفة الفارسي</div>
+  <div class="center-sub">تحفيظ القرآن الكريم — الرفاع · البحرين</div>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-star">✦</div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- الروابط -->
+<div class="links-container">
+
+  <a href="https://lsy303.github.io/quran_stars_multi/" class="link-card" style="animation-delay:.05s">
+    <div class="card-icon icon-green">⭐</div>
+    <div class="card-body">
+      <div class="card-title">لوحة النجوم — متعدد الحلقات</div>
+      <div class="card-desc">متابعة إنجازات الطالبات لجميع حلقات المركز</div>
+    </div>
+    <div class="card-arrow">←</div>
+  </a>
+
+  <a href="https://lsy303.github.io/quran_stars/" class="link-card" style="animation-delay:.12s">
+    <div class="card-icon icon-gold">🌟</div>
+    <div class="card-body">
+      <div class="card-title">لوحة النجوم</div>
+      <div class="card-desc">النسخة الأصلية لمتابعة إنجازات الطالبات</div>
+    </div>
+    <div class="card-arrow">←</div>
+  </a>
+
+  <a href="https://lsy303.github.io/khitta/" class="link-card" style="animation-delay:.19s">
+    <div class="card-icon icon-blue">📋</div>
+    <div class="card-body">
+      <div class="card-title">الخطة التعليمية</div>
+      <div class="card-desc">متابعة الخطة والجدول الدراسي للمركز</div>
+    </div>
+    <div class="card-arrow">←</div>
+  </a>
+
+  <a href="https://lsy303.github.io/Markas/" class="link-card" style="animation-delay:.26s">
+    <div class="card-icon icon-teal">🕌</div>
+    <div class="card-body">
+      <div class="card-title">موقع المركز</div>
+      <div class="card-desc">الصفحة الرئيسية لمركز شيخان وشريفة الفارسي</div>
+    </div>
+    <div class="card-arrow">←</div>
+  </a>
+
+</div>
+
+<div class="footer">
+  مركز شيخان وشريفة الفارسي لتحفيظ القرآن الكريم · الرفاع · البحرين
+</div>
+
+</body>
+</html>
